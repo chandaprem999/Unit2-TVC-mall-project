@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+
+    <style>
+        body{
+            font:Arial,Helvetica,sans-serif;
+            color: #555;
+        }
+        #login-header{
+            height: 75px;
+        }
+    #login-header .header-inner .h-right .hr-item {
+    font: 600 12px Arial,Helvetica,sans-serif;
+    font-size: 18px;
+    display: inline-block;
+    line-height: 78px;
+    margin-left: 20px;
+    padding: 0 10px;
+    border-bottom: 2px solid transparent;
+   
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#login-header .header-inner {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    
+}
+#login-header{
+    background-color: rgb(247,247,247);
+}
+a, body {
+    color: #555;
+}
+
+.h-right>li>a{
+    text-decoration: none;
+
+}
+.site-main-nav .nav .categories li a, .text-hide, a {
+    background-color: transparent;
+}
+.h-right>li {
+   
+    display: inline-block;
+
+}
+.h-right>li>a:hover{
+    color: orange;
+    text-decoration: underline;
+}
+.logo>img{
+    margin-left: -80px;
+}
+.content{
+    width: 100%;
+    background-color: white;
+}
+.mid-text{
+    width: 90%;
+    margin: 50px auto;
+    background-color: white;
+}
+.mid-text>h2{
+    margin-bottom: 10px;
+    font: 600 12px Arial,Helvetica,sans-serif;
+    font-size: 30px;
+}
+.mid-text p{
+    font: 500 13px Arial,Helvetica,sans-serif;
+    padding-top: 10px;
+    width: 70%;
+    line-height: 1.5;
+}
+.mid-text a{
+    color: orange;
+    text-decoration: none;
+}
+.last{
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 90%;
+}
+#myform{
+   text-align: center;
+   justify-content: center;
+
+}
+#myform input,select{
+    width: 300px;
+    height: 20px;
+    box-sizing: content-box;
+    padding: 6px 12px;
+   
+    color: black;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+#myform div:nth-child(1){
+    margin-left: 30px;
+}
+.check{
+    margin-left: 320px;
+    height: 20px;
+    width: 20px;
+    color: orange;
+    
+}
+.r-last{
+    background-color: rgb(238,238,238);
+    padding: 15px;
+}
+.r-last a{
+    color: orange;
+}
+.r-last button{
+    width: 150px;
+    height: 30px;
+    background-color: rgb(0,101,186);
+    border-radius: 4px;
+    color: white !important;
+    padding: 5px;
+    margin:10px;
+    border-style: none;
+}
+.login-des{
+    margin-top: 10px;
+    
+    font: 500 14px Arial,Helvetica,sans-serif;
+}
+.icon div{
+    margin:5px;
+    height: 35px;
+    width: 35px;
+    display: inline-block;
+}
+.icon img{
+    width: 100%;
+    height: 100%;
+}
+.reg-c{
+    display: inline-block;
+    font: 600 12px Arial,Helvetica,sans-serif;
+    margin: 30px 0;
+    color: #e95125;
+    font-size: 14px;
+    text-decoration: underline;
+}
+.last-btn{
+    margin-left: 300px;
+    margin-top: 20px;
+}
+.last-btn input{
+    width: 350px;
+    height:35px;
+    color: white;
+    border-radius: 5px;
+    background-color: rgb(92,184,92);
+    border-style: none;
+    cursor: pointer;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div id="login-header">
+        <div class="header-inner">
+            <a href="" class="logo">
+                <img src="https://www.tvc-mall.com/Images/logo.svg" alt="" width="202" height="68">
+            </a>
+            <ul class="h-right">
+                <li>
+                    <a class="hr-item" href="index.html">Home</a>
+                </li>
+                <li>
+                    <a class="hr-item" href="index.html">New Arrivals</a>
+                </li>
+                <li>
+                    <a class="hr-item" href="index.html">Bestselling</a>
+                </li>
+                <li>
+                    <a class="hr-item" href="/Brands">Brand Zone</a>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="mid-text">
+                <h2>Join TVC-Mall.com Free</h2>
+               
+                <p>Welcome to TVC Mall. Please fill in the following blanks to complete registration. Registered customers can enjoy coupons, TVC points and other discounts on TVC Mall.More details  Here
+
+                    I've already registered. I want to <a href="">Login</a></p>
+            </div>
+        </div>
+        <div class="last">
+            <div class="l-last">
+                <form action="" id="myform">
+                    <div>
+                    <span>*</span><span>Your Email</span>
+                    <input type="text" placeholder="" required id="email">
+                    </div>
+                    <div>
+                    <span>*</span><span>Your Password</span>
+                    <input type="password" placeholder="" required id="password">
+                    </div>
+                    <div>
+                        <span style="margin-left: -20px;">*</span><span>Confirm Password</span>
+                        <input type="password" placeholder="" required id="Newpassword">
+                        </div>
+                        <div>
+                            <span>*Country</span>
+                           <select name="country" id="" style="margin-left: 50px;">
+                            <option value="Please Choose">Please Choose</option>
+                            <option value="India">India</option>
+                            <option value="China">China</option>
+                            <option value="Nepal">Nepal</option>
+                            <option value="USA">USA</option>
+                            <option value="Brazil">Brazil</option>
+                            <option value="Srilanka">Srilanka</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Australia">Australia</option>
+                        </select>
+                        </form>
+                        </div>
+                        <input type="checkbox" class="check" value="true" id="checkbox">
+                        <span>I accept the TVC Terms of Use and Privacy Policy.</span>
+                        <div class="last-btn"> <input type="submit" onclick="register(event)" value="Create My Account"></div>
+                        
+                </form>
+            </div>
+            <div class="r-last">
+                <h4>Already have an Account?</h4>
+                <button> <a href="login.html"> Sign in Now</a></button> <span> <a href="login.html"> Forgot your password?</a></span>
+                <p class="login-des"><strong>You can also sign with:</strong></p>
+                <div class="icon">
+                    <div>
+                    <span>
+                    <a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz0rJ8fADnsoWLEu3YmHyFOZ2YeCKVOHmlCw&usqp=CAU" alt=""></a></span></div>
+                    <div>
+                        <span>
+                        <a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYOYrIg9QH40a3-R7YOBaDr0k7ai6R0yzniw&usqp=CAU" alt=""></a></span></div>
+                        <div>
+                            <span>
+                            <a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUSCxhTs8c2BsOMCGaCyQS9Trx1EHGsHxSsw&usqp=CAU"></a></span></div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
+<script>
+    let form = document.getElementById("myform")
+    //let email = document.getElementById("email").value;
+    
+  
+function register(e){
+
+e.preventDefault();
+if(form.password.value!=form.Newpassword.value){
+    alert("please enter same password")
+
+}else if(document.getElementById("checkbox").checked==false){
+alert("Please agree missed terms and conditions")
+}
+else{
+var user={
+    email:form.email.value,
+    password:form.password.value,
+}
+
+
+let arr= localStorage.getItem("userData")
+if(arr==null){
+    arr=[];
+}else{
+    arr=JSON.parse(localStorage.getItem("userData"))
+}
+arr.push(user);
+
+
+
+localStorage.setItem("userData", JSON.stringify(arr))
+
+alert("Registered Successfuly")
+
+location.assign("login.html")
+
+
+}
+// alert(email)
+// console.log(email)
+
+
+}
+    
+</script>

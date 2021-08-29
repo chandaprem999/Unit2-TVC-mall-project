@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a72892e0d8.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<style>
+     *{
+            padding: 0; margin: 0; box-sizing: border-box; font-family: Arial,Helvetica,sans-serif; color: #555;
+        }
+        .data{
+            display: flex;
+            justify-content: space-around;
+            background-color: rgb(247,247,247);
+            height: 33px;
+            width: 100%;
+            text-align: center;
+            font: 500 15px Arial,Helvetica,sans-serif;
+            border-bottom: 1px solid #eee;
+            position: fixed;
+            top: 0;
+            
+        }
+        .data ul{
+            display: inline-flex;
+            list-style: none;
+            margin:0px 55px;
+        }
+        .data li{
+             
+            display: block;
+            position: relative;
+            margin: 10px;
+            padding: 0px 6px;
+            color: slategray;
+            cursor: pointer;
+          
+        }
+        .data li a{
+            text-decoration: none;
+            color: slategray;
+        }
+        .data>ul>span{
+            padding: 0px 0px;
+            display: block;
+            margin-top: 10px;
+            color: slategray;
+        }
+        .data .orange{
+            color: rgb(237,117,27);
+        }
+        .data>ul>li>i{
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+        .middle{
+            position: fixed;
+            width: 100%;
+        }
+        .search-h{
+            display: flex;
+            justify-content: space-between;
+            /* position: fixed; */
+            margin-top: 13px;
+            width: 100%;
+           padding-left:50px ;
+           padding-right:50px ;
+            padding-top: 20px;
+            font-size: 12px;
+            background-color: #fff;
+          
+            
+           
+        }
+        .logo img{
+            position: relative;
+            top:-14px;
+        }
+        .ssr-search{
+            position: relative;
+            left: 0;
+            width: 580px;
+            text-decoration: underline;
+            display: block;
+            font: 500 12px Arial,Helvetica,sans-serif;
+            color: #555;
+        }
+        .ssr-search>ul>li>a:hover{
+            color:rgb(234,81,27) ;
+        }
+        .s-input{
+            position: absolute;
+            height: 36px;
+            border: 0;
+            top: 0;
+        }
+        .s-input{
+        
+            height: 40px;
+            margin-left: 50px;
+            width: 80%;
+            font-size: 17px;
+            border-style: none;
+            border: solid rgb(234,81,27) 4px;
+        }
+        .btn{
+           
+            margin-left: 510px;
+            width: 36px;
+            height: 40px;
+            overflow: visible;
+            width: 100px;
+            background-color:rgb(234,81,27);
+            color: wheat;
+            padding: 10px;
+            font-size: 20px;
+            border-style: none;
+        }
+        .ssr-search ul{
+            display: inline-flex;
+            list-style: none;
+            margin-left:50px;
+            margin-top: 10px;
+            
+        }
+        .ssr-search li{
+            
+            display: inline-block;
+            position: relative;
+            margin-left: 10px;
+            padding: 0px 6px;
+            color: slategray;
+            cursor: pointer;
+            font: 500 12px Arial,Helvetica,sans-serif;
+
+        }
+        .ssr-search a{
+            text-decoration: none;
+            color:#555 ;
+        }
+        .cart{
+            /* position: relative; */
+            margin-left: 50px;
+            height: 40px;
+            
+        }
+        .cart a{
+            text-decoration: none;
+        }
+        .items{
+            font-size: 30px;
+            text-decoration: none;
+            color: #555;
+        }
+        .f-btn{
+            font-size: 18px;
+            color: white;
+            background-color: rgb(234,81,27);
+            width: 200px;
+            height: 40px;
+            margin-left: 0px;
+        
+        }
+        .middle{
+            width: 100%;
+        }
+        .mid-nav{
+            margin-top: 20px;
+            width: 100%;
+        }
+        .mid-content{
+            /* display: table; */
+            clear: both;
+            justify-content: flex-start;
+            /* position:absolute; */
+            top: 130px;
+            height: 42px;
+            margin-left: 5%;
+            width: 90%;
+            text-align: center;
+            list-style: none;
+            font: 500 12px Arial,Helvetica,sans-serif;
+            
+           
+        }
+        .mid-content>ul{
+            display: inline-flex;
+            flex-direction: row;
+            list-style: none;
+            margin-top: 120px;
+        } 
+        .mid-content>ul>li{
+            width: 150px;
+            margin-left: 10px;
+            
+            font: 500 16px Arial,Helvetica,sans-serif;
+            color: #555;
+        }
+        .mid-content>ul>li:nth-child(1){
+            width: 200px;
+            
+            text-align: center;
+            font:  700 16px Arial,Helvetica,sans-serif;
+            color: #555;
+            padding: 8px;
+        }
+        .mid-content>ul>li>ul>li:hover{
+            color: rgb(234,81,27);
+        }
+        .mid-content>ul>li:hover{
+            color:rgb(234,81,27);
+            cursor: pointer;
+        }
+        .product{
+           
+            margin-top: 120px;
+            display: grid;
+            grid-template-columns: 40% 50%;
+            gap: 3%;
+            margin-left: 50px;
+            margin-right: 50px;
+
+        }
+        .p-img{
+          margin-bottom: 50px;
+            height: 380px;
+            border: 1px solid #eee;
+
+        }
+        
+        .p-title{
+            font: 500 12px Arial,Helvetica,sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            margin-top: 0;
+            color: #000;
+            margin-bottom: 10px;
+        }
+        .detail-tips{
+            font: 500 12px Arial,Helvetica,sans-serif;
+            color:#555
+        }
+        .spt{
+            padding: 0 15px;
+        font-size: 18px;
+        color: #ddd;
+        }
+        .rating-wrap{
+            display: inline-block;
+            font:500 12px Arial,Helvetica,sans-serif;
+        }
+        .price-wrap{
+            margin-top: 20px;
+            background-color: #f4f4f4;
+            padding: 19px 15px;
+            font-size: 14px;
+            color: #333;
+        }
+        .title{
+        margin-right: 15px;
+        font: 500 12px Arial,Helvetica,sans-serif;
+        display: inline-block;
+        vertical-align: baseline;
+        text-align: right;
+        font-size: 12px;
+        font-weight: 700;
+        width: 59px;
+        color: #333;
+    }
+    .o-color{
+        color: #ea511b;;
+    }
+    .d-price{
+        font-size: 30px;
+    margin-right: 15px;
+    vertical-align: baseline;
+    font:500 30px Arial,Helvetica,sans-serif;
+    }
+    .o-price{
+        text-decoration: line-through;
+    margin-right: 5px;
+    vertical-align: baseline;
+    }
+    .detail-item{
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 15px;
+        color: #555;
+        font: 500 12px Arial,Helvetica,sans-serif;
+    }
+    .count-btn{
+    width: 25px;
+    height: 25px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    line-height: 25px;
+    font-size: 25px;
+    color: #ccc;
+    cursor: pointer;
+    }
+    .count-dis{
+        width: 60px;
+    vertical-align: middle;
+    text-align: center;
+    height: 25px;
+    line-height: 25px;
+    border: 1px solid #ccc;
+    padding-top: 0;
+    padding-bottom: 0;
+    outline: 0;
+    padding: 1px 2px;
+    }
+    .label-count{
+        margin-right: 15px;
+    }
+    #price-disp{
+        color: #ea511b;
+    font: 600 12px Arial,Helvetica,sans-serif;
+    font-size: 20px;
+    line-height: 28px;
+    margin-left: 15px;
+    }
+    .buy-now{
+        color: #fff;
+    font-size: 18px;
+    background-color: #ea511b;
+    line-height: 40px;
+    width: 160px;
+    border: none;
+    outline: 0;
+    margin-right: 20px;
+    }
+    .add-cart{
+    font-size: 18px;
+    border: 1px solid #ea511b;
+    color: #ea511b;
+    line-height: 40px;
+    width: 160px;
+    background: 0 0;
+    margin-right: 15px;
+    }
+    .buy{
+        margin-top: 15px;
+    }
+    .t-data{
+        border: 1px solid black;
+        padding: 10px;
+        margin-left: 0px;
+        width: 120px;
+    }
+    .o-data{
+    color:#ea511b;
+    text-decoration:line-through;
+    }
+    .mid-part{
+        display: grid;
+        grid-template-columns: 250px 70%;
+        margin-left: 50px;
+        margin-right: 50px;
+        gap: 3%;
+        
+    }
+    .mid-left{
+   
+    font: 500 13px Arial,Helvetica,sans-serif;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    padding: 0 0 21px;
+    background-color: rgb(234, 81, 27);
+    }
+    .l-photo{
+        padding: 13px;
+    }
+    .mandy>i{
+       
+        font-size: 20px;
+        width: 30%;
+        
+    }
+    .mid-left>p:nth-child(1){
+        color: white;
+    }
+
+    
+    .fixed-div{
+        background-color: #fff;
+    width: 960px;
+    }
+    .fixed-cont{
+        background-color: rgb(234, 81, 27);
+        color: #fff;
+        width: 250px;
+        padding: 10px;
+        display: block;
+       
+        font: 500 13px Arial,Helvetica,sans-serif;
+        margin-bottom: 10px;
+    }
+    .fixed-div>h4,.fixed-div>h5{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .fixed-div>ul{
+        margin-left: 20px;
+        line-height: 20px;
+        font-size: 14px;
+
+    }
+    .spc{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .table {
+    display: table;
+    /* border-collapse: separate; */
+    box-sizing: border-box;
+    /* text-indent: initial; */
+    border-spacing: 2px;
+    border-color: grey;
+    }
+    .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    padding: 5px;
+    line-height: 1.5;
+    /* vertical-align: top; */
+    border-top: 1px solid #ddd;
+    width: 100%;
+    text-align: left;
+}
+.table td {
+    padding: 5px;
+    line-height: 1.5;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+
+        
+</style>
+
+<body>
+    <div class="data">
+        <ul>
+            <li> <a href=""><i class="far fa-comment-alt"></i> English </a></li>
+            <li> <i class="fas fa-comment-dollar"></i><a href="">Currency</a></li>
+          
+        </ul>
+        <ul>
+            <li><i class="fas fa-mobile-alt"></i>Mobile Web page</li>
+            <li> <a  class="orange" href="login.html">Sign in</a> </li>
+            <span>or</span>
+            <li > <a class="orange" href="register.html"> Register</a></li>
+            <li>Help</li>
+            <li><i class="fas fa-headset"></i>Online Chat</li>
+            <li><i class="fas fa-share-alt"></i>Share</li>
+        </ul>
+    </div>
+    <div class="middle">
+    <div class="search-h">
+        <div class="logo">
+            <a href="">
+               <h1><img src="https://www.tvc-mall.com/Images/logo.svg" width="202" height="68" alt=""></a></h1> 
+        </div> 
+         <div class="ssr-search">
+            <form action="" class="search-box">
+                <input type="search" name="" id="" placeholder="Search Whole Sale Products" class="s-input">
+                <button class="btn"><i class="fas fa-search"></i></button>
+            </form>
+            <ul>
+                <li> <a href="">Hot searches:</a> </li>
+               
+                <li> <a href="">Galaxy s21+5G</a>  </li>
+                <li> <a href="">iPhone13</a> </li>
+                <li> <a href="">MI11 ultra</a>  </li>
+                <li> <a href="">iphone 13 pro</a>  </li>
+                <li> <a href="">Airbag</a> </li>
+            </ul>
+
+        </div>
+        <div class="cart">
+            <div class="items">
+                <a href=""><i class="fas fa-shopping-cart"></i>items<i class="fas fa-caret-down"></i></a>
+            </div>
+        </div>
+        <div class="finder">
+           <a href=""><button class="f-btn">Accessories Finder</button></a>
+        </div>
+
+    </div>
+</div>
+    <div class="mid-nav">
+        <div class="mid-content">
+            <ul>
+                <li style="background-color: rgb(238,238,238) ; border-radius: 2px;font-weight:00;">  <span>WholeSale Categories</span> 
+                    
+                </li>
+                <li>New Arrivals</li>
+                <li>Bestselling</li>
+                <li>Recomended</li>
+                <li>Product series</li>
+                <li>Brand Zone</li>
+                <li>Coupen deals</li>
+                <li>Student Discount</li>
+            </ul>
+        </div>
+    </div>
+    <div class=product>
+        <div class="p-img" >
+            <img  id="proImage"  width="500px" height="350px" title="">
+        </div>
+        <div class="product-info">
+            <h1 id="proName" class="p-title">ORICO 2577U3 2.5 inch USB3.0 External Hard Drive Enclosure</h1>
+            <div class="detail-tips">
+                <span class="tips-item">
+                    Item No.:
+                    <span id="productSku">801100250A</span>
+                </span>
+                <span class="spt">|</span>
+
+                <span class="tips-item">MOQ: 1</span>
+                <span class="spt">|</span>
+                <span class="tips-item">
+                            <span class="o-color f-weight" title="Time between Payment and Deliver(Not include transport time)"><i class="icon-box"></i><span class="text">Ships in 1 - 3  days</span></span>
+
+                </span>
+                <span class="spt">|</span>
+                    <div class="rating-wrap">
+                      <span class="r-reviews">
+                            (<span class="o-color">0 reviews</span>)
+                        </span>
+                    </div>
+            </div>
+            <div class="price-wrap">
+
+                <span class="title" style="width:59px;">Price:</span>
+               <span class="d-price o-color">$ <span class="d-price o-color" data-type="single-price" id="proPrice"></span></span>
+                <span class="o-price">$ <span class="o-price" id = "price"></span></span>
+                <span class="discount o-color">(<span data-type="dis-display">8%</span> OFF)</span>
+
+            </div>
+            <div class="detail-item">
+                <span class="label label-count">Qty:</span>
+                <button onclick="dec()" class="count-btn">-</button><span id="count" class="count-dis">1</span><button onclick="add()" class="count-btn">+</button>
+                <span id="price-disp"></span>
+            </div>
+            <div class="buy">
+                <button onclick="buyNow()" class="buy-now">Buy Now</button>
+                <button onclick="buyNow()" class="add-cart"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
+                <span><i class="fas fa-share-alt"></i>Share</span>
+                <p style="margin-top: 10px; margin-bottom: 10px;">Estimated Shipping Cost: $6.89 (Ship to United States via EUB More Shipping Options )</p>
+                <p>Buy more, save more</p>
+                <table>
+                    <tr>
+                        <th class="t-data">1 + units</th>
+                        <th class="t-data">2 + units</th>
+                        <th class="t-data">10 + units</th>
+                        <th class="t-data">25 + units</th>
+                        <th class="t-data">50 + units</th>
+                    </tr>
+                    <tr>
+                        <th class="t-data o-data">$6.58</th>
+                        <th class="t-data o-data">$6.39</th>
+                        <th class="t-data o-data">$6.15</th>
+                        <th class="t-data o-data">$5.9</th>
+                        <th class="t-data o-data">$5.75</th>
+                    </tr>
+                </table>
+            </div>
+            
+
+        </div>
+    </div>
+    <div class="mid-part">
+        <div class="mid-left">
+            <p>Contact Sales Manager</p>
+            <div class="l-photo">
+                <img src="https://upload-img.tvc-mall.com/uploads/userProfile/20180918160209_mandy.jpg" alt="">
+            </div>
+            <a href="">Sales Manager: Mandy</a>
+         <p class="mandy"><i class="far fa-envelope-open"></i>mandy@tvc-mail.com</p>
+         <p class="mandy"><i class="fab fa-skype"></i>tvc-mandy</p>
+         <p class="mandy"><i class="fab fa-whatsapp-square"></i>987654321</p>
+         <p class="mandy"><i class="fab fa-snapchat-square"></i>8426541252</p>
+        </div>
+        
+        <div class="mid-right">
+            <div class="fixed-div">
+                <p class="fixed-cont">Features and Specifications</p>
+                <h2>Product Description</h2>
+                <h4>ORICO 2577U3 2.5 inch USB3.0 External Hard Drive Enclosure</h4>
+                <ul>
+                    <li>Adopts non-toxic environmental ABS material, good heat dissipation, grid texture surface processing, anti-skid and fingerprint-free</li>
+                    <li>USB3.0 fast transmission</li>
+                    <li>Low consumption, low heat, good efficiency, better experience</li>
+                    <li>Tool-free installation, more convenient</li>
+                    <li>Slide disassembly design, no screws installation</li>
+                    <li>Support 9.5mm and below 2.5 inch HDD and SSD, compatible with Windows/Mac 9.1/10.2 and above systems</li>
+                    <li>Note: External enclosure only, hard drive IS NOT INCLUDED!</li>
+                </ul>
+                <h5 >Specifications:</h5>
+                <ul>
+                    <li>Material: ABS </li>
+                    <li>Interface: USB3.0 Micro B + SATA3.0</li>
+                    <li>Support Hard Drive: 9.5mm and below</li>
+                    <li>Dimension: 126.5 x 80 x 14.5mm</li>
+                    <li>Support System: Windows/Mac 9.1/10.2 and above</li>
+                </ul>
+                <h2 class="spc">Specifications</h2>
+                <table class="table">
+                    <tbody><tr class="property" style="visibility:visible">
+                        <th class="key">
+Brand                        </th>
+                        <td class="value">Orico</td>
+                    </tr>
+                    <tr class="property" style="visibility:visible">
+                        <th class="key">
+Retail Packaging                        </th>
+                        <td class="value">Color Box</td>
+                    </tr>
+                    <tr class="property" style="visibility:visible">
+                        <th class="key">
+Gross Weight                        </th>
+                        <td class="value">0.199kg</td>
+                    </tr>
+                    <tr class="property" style="visibility:visible">
+                        <th class="key">
+Volume Weight                        </th>
+                        <td class="value">0.191kg</td>
+                    </tr>
+                    <tr class="property" style="visibility:visible">
+                        <th class="key">
+Package Length                        </th>
+                        <td class="value">21.200cm</td>
+                    </tr>
+                    <tr class="property" style="visibility:visible">
+                        <th class="key">
+Package Width                        </th>
+                        <td class="value">11.200cm</td>
+                    </tr>
+                    <tr class="property" style="visibility:visible">
+                        <th class="key">
+Package Height                        </th>
+                        <td class="value">3.600cm</td>
+                    </tr>
+                    <tr class="property" style="visibility:visible">
+                        <th class="key">
+One Package Weight                        </th>
+                        <td class="value">0.178kg</td>
+                    </tr>
+                    <tr class="property" style="visibility:hidden">
+                        <th class="key">
+With Retail Packaging                        </th>
+                        <td class="value">Yes</td>
+                    </tr>
+
+        </tbody></table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+
+    
+    
+    
+    var p_image = document.getElementById("proImage")
+
+    p_image.src=localStorage.getItem("ep_img")
+
+
+    var p_name = document.getElementById("proName")
+    var p_disply = document.getElementById("price-disp")
+
+    p_disply = localStorage.getItem("en_price")
+    p_name.innerHTML=localStorage.getItem("ep_name")
+
+    var proPrice = document.getElementById("proPrice");
+    proPrice.innerHTML = localStorage.getItem("ep_price")
+   
+    
+    var p_name = document.getElementById("price-disp") 
+    p_name.innerHTML= "$"+localStorage.getItem("ep_price")
+
+
+    var count=0;
+    var price = document.getElementById("proPrice").innerHTML;
+
+    function add(){
+        var container = document.getElementById("count");
+        count++;
+        container.innerHTML=count;
+
+        //console.log(price);
+
+        let priceplace = document.getElementById("price-disp");
+        var total = count*(Number(price));
+        priceplace.innerHTML= "$"+(total);
+
+        console.log(total);
+        localStorage.setItem("totalPrice",total)
+        localStorage.setItem("tCount",count);
+     
+
+    }
+
+    function dec(){
+        let container = document.getElementById("count");
+        count--;
+        
+        if(count<1){
+            count=1
+        }
+        container.innerHTML=count;
+
+        let priceplace = document.getElementById("price-disp");
+        let total = count*price;
+        priceplace.innerHTML="$"+total;
+
+        localStorage.setItem("totalPrice",total)
+        localStorage.setItem("tCount",count);
+    }
+
+    
+    function buyNow(){
+        
+        window.location.href="cart.html"
+    }
+
+    
+
+</script>

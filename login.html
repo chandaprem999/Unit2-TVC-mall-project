@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        #login-header .header-inner .h-right .hr-item {
+    font: 600 12px Arial,Helvetica,sans-serif;
+    font-size: 18px;
+    display: inline-block;
+    height: 100%;
+    line-height: 78px;
+    margin-left: 20px;
+    padding: 0 10px;
+    border-bottom: 2px solid transparent;
+   
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#login-header .header-inner {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    
+}
+#login-header{
+    background-color: rgb(247,247,247);
+}
+a, body {
+    color: #555;
+}
+
+.h-right>li>a{
+    text-decoration: none;
+
+}
+.site-main-nav .nav .categories li a, .text-hide, a {
+    background-color: transparent;
+}
+.h-right>li {
+   
+    display: inline-block;
+
+}
+.h-right>li>a:hover{
+    color: orange;
+    text-decoration: underline;
+}
+.logo>img{
+    margin-left: -80px;
+}
+#l-content>img{
+    width: 80%;
+    margin: auto 10%;
+}
+#content{
+    display: grid;
+    grid-template-columns: 50% auto;
+}
+
+
+
+#r-content>h2{
+color: #555555;
+font: 600 22px Arial,Helvetica,sans-serif;
+margin-top: 50px;
+margin-bottom: 0;
+
+}
+#login-info{
+    background-color: rgb(247,247,247);
+    margin:10px 0px 0px;
+    padding: 0px 0px 20px 20px;
+  width: 80%;          
+}
+.info{
+    width: 332px;
+    height: 26px;
+    margin-top: 20px;
+    box-sizing: content-box;
+    padding: 6px 12px;
+    border-radius: 4px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    font-size: 14px;
+    line-height: 1.42857143;
+    display: block;
+    color: #555;
+}
+#checkbox{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    width: 18px;
+    height: 18px;
+    /* background: url(/content/images/icons/icheck-red.png) no-repeat; */
+    border: none;
+    cursor: pointer;
+    color: #555;
+    
+}
+#r-me{
+    margin-top: 10px;
+    width: 332px;
+    height: 26px;
+    font: 500 12px Arial,Helvetica,sans-serif;
+}
+#btn{
+    width: 360px;
+    height: 40px;
+    line-height: 20px;
+    font-size: 20px;
+    margin-top: 10px;
+    border: none;
+    color: #fff;
+    background-color: #0065ba;
+    white-space: nowrap;
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+.f-password{
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: underline;
+    cursor: pointer;
+    font: 500 12px Arial,Helvetica,sans-serif;
+}
+.login-des{
+    margin-top: 10px;
+    
+    font: 500 14px Arial,Helvetica,sans-serif;
+}
+.icon div{
+    margin:5px;
+    height: 35px;
+    width: 35px;
+    display: inline-block;
+}
+.icon img{
+    width: 100%;
+    height: 100%;
+}
+.reg-c{
+    display: inline-block;
+    font: 600 12px Arial,Helvetica,sans-serif;
+    margin: 30px 0;
+    color: #e95125;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+
+</style>
+</head>
+<body>
+    <div id="login-header">
+        <div class="header-inner">
+            <a href="" class="logo">
+                <img src="https://www.tvc-mall.com/Images/logo.svg" alt="" width="202" height="68">
+            </a>
+            <ul class="h-right">
+                <li>
+                    <a class="hr-item" href="/">Home</a>
+                </li>
+                <li>
+                    <a class="hr-item" href="/NewArrivals">New Arrivals</a>
+                </li>
+                <li>
+                    <a class="hr-item" href="/BestSelling">Bestselling</a>
+                </li>
+                <li>
+                    <a class="hr-item" href="/Brands">Brand Zone</a>
+                </li>
+            </ul>
+        </div>
+       
+    </div>
+    
+    <div id="content">
+        <div id="l-content">
+            <img src="https://src.tvc-mall.com/content/images/home.jpg?v=3.3.13" alt=""  height="580">
+        </div>
+        <div id="r-content">
+            <h2>Sign In to TVC-Mall</h2>
+            <hr style="width: 600px;height: 4px; color:#555555;background-color:#555555; margin-bottom: 20px;">
+            <div id="login-info">
+                <form action="">
+                    <div>.</div>
+                    <input type="email" required id="email" placeholder="Email Address" class="info">
+                    <input type="password" required id="password" placeholder="Password" class="info">
+                    <div id="r-me">
+                        <input type="checkbox" value="true" id="checkbox">
+                        <span style="font: 500 12px Arial,Helvetica,sans-serif;">Remember Me?</span>
+                    </div>
+                    <input type="submit" onclick="check(event)" value="Sign in Security" id="btn">
+                </form>
+                <a href="" class="f-password">Forgot your Password?</a>
+                <p class="login-des"><strong>You can also sign with:</strong></p>
+                <div class="icon">
+                    <div>
+                    <span>
+                    <a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz0rJ8fADnsoWLEu3YmHyFOZ2YeCKVOHmlCw&usqp=CAU" alt=""></a></span></div>
+                    <div>
+                        <span>
+                        <a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYOYrIg9QH40a3-R7YOBaDr0k7ai6R0yzniw&usqp=CAU" alt=""></a></span></div>
+                        <div>
+                            <span>
+                            <a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUSCxhTs8c2BsOMCGaCyQS9Trx1EHGsHxSsw&usqp=CAU"></a></span></div>
+                </div>
+                <a href="" class="reg-c">Register to get 265 coupens</a>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+
+function check(e){
+    e.preventDefault();
+    let loginInfo = JSON.parse(localStorage.getItem("userData"));
+//console.log(loginInfo);
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    for(let i=0;  i<loginInfo.length; i++){
+        if(email==loginInfo[i].email && password==loginInfo[i].password){
+            alert("login success" )
+        
+            location.assign("index.html")
+            break;
+        }else{
+            alert("Invalid Username and Password")
+        }
+    }
+
+
+}
+
+
+</script>

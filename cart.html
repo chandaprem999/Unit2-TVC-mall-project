@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cartPage</title>
+
+    <style>
+        .cart-header{
+            width: 100%;
+            border-bottom: 5px solid #ea511b;
+        }
+        .header-inner{
+        display: flex;
+        justify-content: space-between;
+        margin: 20px auto;
+        width: 1200px;
+        font: 500 12px Arial,Helvetica,sans-serif;
+        color: #555;
+        }
+        .logo{
+            display: block;
+            width: 200px;
+            cursor: pointer;
+        }
+        .order-status{
+            height: 61px;
+            width: 488px;
+            display: flex;
+            justify-content: flex-start;
+            font: 500 12px Arial,Helvetica,sans-serif;
+            color: #555;
+        }
+        .order-info span{
+            width: 162px;
+            font-size: 18px;
+            text-align: center;
+            overflow: hidden;
+            font-weight: 700;
+            line-height: 50px;
+            margin-left: 100px;
+            margin-left: 100px;
+        }
+        .order-info{
+            color: #70b208;
+        }
+        .payment,.payment-succ{
+            color: #8e8a86;
+            font: 500 12px Arial,Helvetica,sans-serif;
+        }
+        .mid-info{
+            margin-left: 50px;
+            margin-right: 50px;
+            width: 100%;
+        }
+        .inner-info>h3{
+            color: #555;
+            display: block;
+            font-size: 1.17em;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+    .order-list{
+        display: flex;
+        justify-content: space-around;
+        background-color: #fcfcfc;
+        border: 1px solid #eee;
+
+    }
+    .order-list{
+    display: flex;
+    justify-content: space-around;
+    background-color: #fcfcfc;
+    border: 1px solid #eee;
+    }
+    .h-item{
+        font: 600 12px Arial,Helvetica,sans-serif;
+    line-height: 32px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #555;
+    }
+    .detail-item{
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 15px;
+        color: #555;
+        font: 500 12px Arial,Helvetica,sans-serif;
+        text-align: center;
+    }
+    .count-btn{
+    width: 25px;
+    height: 25px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    line-height: 25px;
+    font-size: 25px;
+    color: #ccc;
+    cursor: pointer;
+    text-align: center;
+    }
+    .count-dis{
+    width: 60px;
+    vertical-align: middle;
+    text-align: center;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #ccc;
+    padding-top: 0;
+    padding-bottom: 0;
+    outline: 0;
+    padding: 1px 1px;
+    }
+    .coupen-part{
+        margin-top: 10px;
+    border-bottom: 2px solid #ea511b;
+    font: 500 12px Arial,Helvetica,sans-serif;
+    }
+    .apply{
+        margin: 20px;
+    }
+    .apply>input{
+        width: 200px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        padding-right: 12px;
+        padding-left: 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        display: inline-block;
+        color: #555;
+        background-color: #fff;
+        border: 1px solid #ccc;
+    }
+    .btn-apply{
+        margin-left: 10px;
+    height: 32px;
+    border-radius: 0;
+    width: 82px;
+    padding: 5px;
+    color: #fff!important;
+    background-color: #ea511b!important;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    }
+    .payment{
+        float: right;
+    margin-right: 75px;}
+    .payment>div>span{
+    font: 600 15px Arial,Helvetica,sans-serif;
+    
+    }
+    .payment>div{
+        margin-top: 10px;
+    }
+    .p-orange{
+        color:#ea511b ;
+    }
+    .apply-btn{
+    margin-top: 10px;
+
+    height: 32px;
+    border-radius: 0;
+    width: 170px;
+    padding: 5px;
+    color: #fff!important;
+    background-color: #ea511b!important;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+    <div class="cart-header">
+        <div class="header-inner">
+            <a href="">
+                <img src="https://www.tvc-mall.com/Images/logo.svg" width="202" height="68" alt="">
+            </a>
+            <div class="order-status">
+                <span class="order-info">Order Info</span>
+                <span class="payment">Payment</span>
+                <span class="payment-succ">Order Complete</span>
+            </div>
+            
+        </div>
+        
+    </div>
+    <div class="mid-info">
+        <div class="inner-info">
+        <h3>Shopping Cart</h3>
+    </div>
+    <div class="mid-img" style="cursor: pointer; position: relative;">
+        <img style="margin-top: 10px;" src="chrome-extension://ojplmecpdpgccookcobabopnaifgidhf/apply-coupon.png" alt="">
+    </div>
+    <div class="order-list">
+        <div class="i-No h-item">No</div>
+        <div class="i-img h-item">Image</div>
+        <div class="i-price h-item">Price</div>
+        <div class="i-qty h-item">Qty</div>
+
+    </div>
+    <div class="order-list">
+        <div id="no" class="i-No h-item">01</div>
+        <div  class="i-img h-item">
+            <img id="image" width="200px" height="150px" alt="">
+        </div>
+        <div id="price" class="i-price h-item">Price</div>
+        <div class="detail-item">
+            <button onclick="dec()" class="count-btn">-</button><span id="count" class="count-dis">1</span><button onclick="add()" class="count-btn">+</button>
+            <span id="price-disp"></span>
+        </div>
+
+    </div>
+    <div class="coupen-part">
+        <p class="appy-btn">Apply Coupen Code</p>
+    </div>
+    <div class="apply">
+    <input type="text" name="" id="coupan">
+     <button class="btn-apply" onclick="apply()">Appy</button>
+    </div>
+    <div class="payment">
+        <div>
+        <span >SubTotal--------------$<span  class="p-orange" id="subTotal"></span>0</span>
+    </div>
+    <div>
+        <span>Discount--------------$ <span class="p-orange" id="discount">0</span></span>
+    </div>
+    <div>
+        <span>Amount Payable----$<span class="p-orange" id="payable"> 0</span ></span>
+    </div><button onclick="paymentSucc()" class="apply-btn">Place Your Order</button>
+    
+    </div>
+    </div>
+</body>
+</html>
+
+<script>
+ var count=1;
+
+
+
+console.log(itemImage);
+var itemPrice = document.getElementById("price");
+console.log(itemPrice);
+
+
+var subTotal = document.getElementById("subTotal");
+subTotal.innerHTML= "$"+localStorage.getItem("totalPrice")
+
+document.getElementById("count").innerHTML=localStorage.getItem("tCount")
+
+
+
+
+var noOfItems = document.getElementById("no");
+var itemImage = document.getElementById("image");
+
+itemImage.src=localStorage.getItem("ep_img")
+itemPrice.innerHTML=localStorage.getItem("ep_price")
+
+
+
+function apply(){
+
+   let total= localStorage.getItem("totalPrice");
+   let coupan=document.getElementById("coupan").value;
+   let dis=document.getElementById("payable");
+   document.getElementById("discount").innerHTML="30%"
+   if(coupan=="TVC30"){
+    total=total*0.7;
+    dis.innerHTML=total;
+   }else{
+       alert("Enter valid coupan code");
+   }
+   
+
+
+}
+
+function paymentSucc(){
+
+    window.location.href="paymentSuccessfull.html"
+}
+
+</script>
